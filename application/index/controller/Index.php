@@ -1,14 +1,19 @@
 <?php
 namespace app\index\controller;
-
-class Index
+use think\Controller;
+use think\Db;
+class Index extends \think\Controller
 {
     public function index()
     {
         return 'Hello world!';
     }
-     public function hello()
+    public function hello()
     {
-        return '你好 世界!';
+    	// echo '1111';die();
+        $data = Db::name('data')->find();
+        // dump($data);
+        $this->assign('result', $data);
+        return $this->fetch('index');
     }
 }
