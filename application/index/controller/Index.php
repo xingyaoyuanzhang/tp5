@@ -2,11 +2,14 @@
 namespace app\index\controller;
 use think\Controller;
 use think\Db;
+use app\common\controller\Index as commonIndex;
 class Index extends \think\Controller
 {
     public function index()
     {
-        return 'Hello world!';
+        $common = new commonIndex();
+//        return $common->index();
+        dump(config());
     }
     public function hello()
     {
