@@ -14,10 +14,10 @@ class Index extends \think\Controller
     public function hello()
     {
     	// echo '1111';die();
-        $data = Db::name('data')->find();
+        // $data = Db::name('data')->find();
         // dump($data);
-        $this->assign('result', $data);
-        return $this->fetch('index');
+        // $this->assign('result', $data);
+        return $this->fetch('hello');
     }
     public function test($name = 'world', $city = 'shanghai')
     {
