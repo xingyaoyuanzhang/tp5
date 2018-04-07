@@ -19,4 +19,8 @@ class Index extends \think\Controller
         $this->assign('result', $data);
         return $this->fetch('index');
     }
+    public function test($name = 'world', $city = 'shanghai')
+    {
+        return '   Hello    '.$name.'    come from    '.$city;
+    }
 }
